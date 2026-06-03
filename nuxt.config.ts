@@ -1,3 +1,4 @@
+import type {} from './.nuxt/nuxt.node.d.ts'
 export default defineNuxtConfig({
   compatibilityDate: '2025-11-01',
   srcDir: 'src',
@@ -18,11 +19,11 @@ export default defineNuxtConfig({
     typeCheck: true
   },
   runtimeConfig: {
-    googleClientId: process.env.GOOGLE_CLIENT_ID || '',
-    googleClientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
-    googleRedirectUri: process.env.GOOGLE_REDIRECT_URI || '',
+    googleClientId: '',
+    googleClientSecret: '',
+    googleRedirectUri: '',
     public: {
-      appUrl: process.env.NUXT_PUBLIC_APP_URL || ''
+      appUrl: ''
     }
   },
   nitro: {
