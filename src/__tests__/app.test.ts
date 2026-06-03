@@ -6,7 +6,7 @@ import App from '~/app.vue'
 describe('App', () => {
   it('renders the headline', async () => {
     const wrapper = await mountSuspended(App)
-    expect(wrapper.text()).toContain('InboxDiet')
+    expect(wrapper.text()).toContain('TrimBox')
   })
 
   it('renders the footer attribution', async () => {
