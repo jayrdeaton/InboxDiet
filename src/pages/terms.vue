@@ -10,22 +10,22 @@
 
       <section class="mb-8">
         <h2 class="text-lg font-semibold mb-3">Use of the service</h2>
-        <p class="text-gray-600 dark:text-zinc-400 text-sm leading-relaxed">InboxDiet is a free tool that scans your Gmail inbox to identify mailing list subscriptions. By using InboxDiet you agree to use it only for lawful purposes and in accordance with these terms. You must have a valid Google account and grant the necessary Gmail permissions to use the service.</p>
+        <p class="text-gray-600 dark:text-zinc-400 text-sm leading-relaxed">TrimBox is a free tool that scans your Gmail inbox to identify mailing list subscriptions. By using TrimBox you agree to use it only for lawful purposes and in accordance with these terms. You must have a valid Google account and grant the necessary Gmail permissions to use the service.</p>
       </section>
 
       <section class="mb-8">
         <h2 class="text-lg font-semibold mb-3">Gmail access</h2>
-        <p class="text-gray-600 dark:text-zinc-400 text-sm leading-relaxed">InboxDiet requests read-only access to your Gmail account. We do not modify, delete, or send emails on your behalf. You can revoke access at any time through <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener" class="text-orange-600 dark:text-orange-400 hover:underline">Google Account Permissions</a>.</p>
+        <p class="text-gray-600 dark:text-zinc-400 text-sm leading-relaxed">TrimBox requests read-only access to your Gmail account. We do not modify, delete, or send emails on your behalf. You can revoke access at any time through <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener" class="text-orange-600 dark:text-orange-400 hover:underline">Google Account Permissions</a>.</p>
       </section>
 
       <section class="mb-8">
         <h2 class="text-lg font-semibold mb-3">No warranties</h2>
-        <p class="text-gray-600 dark:text-zinc-400 text-sm leading-relaxed">InboxDiet is provided "as is" without warranty of any kind. We do not guarantee that the service will be uninterrupted, error-free, or that all mailing list subscriptions in your inbox will be detected.</p>
+        <p class="text-gray-600 dark:text-zinc-400 text-sm leading-relaxed">TrimBox is provided "as is" without warranty of any kind. We do not guarantee that the service will be uninterrupted, error-free, or that all mailing list subscriptions in your inbox will be detected.</p>
       </section>
 
       <section class="mb-8">
         <h2 class="text-lg font-semibold mb-3">Limitation of liability</h2>
-        <p class="text-gray-600 dark:text-zinc-400 text-sm leading-relaxed">To the fullest extent permitted by law, InboxDiet and its operators shall not be liable for any indirect, incidental, or consequential damages arising from your use of the service.</p>
+        <p class="text-gray-600 dark:text-zinc-400 text-sm leading-relaxed">To the fullest extent permitted by law, TrimBox and its operators shall not be liable for any indirect, incidental, or consequential damages arising from your use of the service.</p>
       </section>
 
       <section class="mb-8">
