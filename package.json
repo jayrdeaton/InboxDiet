@@ -1,7 +1,7 @@
 {
   "name": "inboxdiet",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Scan your Gmail inbox and find every mailing list you're subscribed to.",
   "author": "Jay Deaton",
   "license": "MIT",
