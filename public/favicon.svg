@@ -1,5 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <circle cx="50" cy="50" r="50" fill="#16a34a"/>
-  <rect x="17" y="32" width="66" height="44" rx="5" fill="none" stroke="white" stroke-width="5"/>
-  <polyline points="17,36 50,58 83,36" fill="none" stroke="white" stroke-width="5" stroke-linejoin="round"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(10.24,0,0,10.24,0,0)">
+        <g id="InboxDiet">
+            <g id="Favicon">
+                <circle cx="50" cy="50" r="50" style="fill:rgb(245,129,0);"/>
+                <g transform="matrix(1,0,0,1,0,-4)">
+                    <path d="M83,32.488C83,32.219 82.781,32 82.512,32L17.488,32C17.219,32 17,32.219 17,32.488L17,75.512C17,75.781 17.219,76 17.488,76L82.512,76C82.781,76 83,75.781 83,75.512L83,32.488Z" style="fill:none;stroke:white;stroke-width:5px;"/>
+                    <path d="M17,36L50,58L83,36" style="fill:none;fill-rule:nonzero;stroke:white;stroke-width:5px;stroke-linejoin:round;"/>
+                </g>
+            </g>
+        </g>
+    </g>
 </svg>

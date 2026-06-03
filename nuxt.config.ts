@@ -19,7 +19,11 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     googleClientId: process.env.GOOGLE_CLIENT_ID || '',
-    googleClientSecret: process.env.GOOGLE_CLIENT_SECRET || ''
+    googleClientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
+    googleRedirectUri: process.env.GOOGLE_REDIRECT_URI || '',
+    public: {
+      appUrl: process.env.NUXT_PUBLIC_APP_URL || ''
+    }
   },
   nitro: {
     vercel: {
