@@ -15,7 +15,7 @@ module.exports = defineConfig([
     languageOptions: {
       parser: tsParser,
       parserOptions: {
-        projectService: { allowDefaultProject: ['vitest.config.ts'] },
+        projectService: { allowDefaultProject: ['vitest.config.ts', 'nuxt.config.ts'] },
         extraFileExtensions: ['.vue']
       }
     }
@@ -26,7 +26,7 @@ module.exports = defineConfig([
       parser: vueParser,
       parserOptions: {
         parser: tsParser,
-        projectService: { allowDefaultProject: ['vitest.config.ts'] },
+        projectService: { allowDefaultProject: ['vitest.config.ts', 'nuxt.config.ts'] },
         extraFileExtensions: ['.vue']
       }
     }
@@ -45,6 +45,12 @@ module.exports = defineConfig([
       'no-console': 'warn',
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-require-imports': 'off'
+    }
+  },
+  {
+    files: ['src/pages/**/*.vue'],
+    rules: {
+      'vue/multi-word-component-names': 'off'
     }
   }
 ])
