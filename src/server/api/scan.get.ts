@@ -18,29 +18,14 @@ interface SenderAggregate {
 
 type MailboxScope = 'primary' | 'spam' | 'trash'
 type GroupByMode = 'domain' | 'exact'
-type SortByMode = 'count' | 'newest'
+// type SortByMode = 'count' | 'newest'
 
 const MAX_MESSAGES = 10000
 const BATCH_SIZE = 50
 
 const formatNumber = (value: number): string => value.toLocaleString()
 
-const COMMON_SECOND_LEVEL_SUFFIXES = new Set([
-  'co.uk',
-  'org.uk',
-  'ac.uk',
-  'gov.uk',
-  'com.au',
-  'net.au',
-  'org.au',
-  'co.nz',
-  'com.br',
-  'com.mx',
-  'co.jp',
-  'co.kr',
-  'com.sg',
-  'co.in'
-])
+const COMMON_SECOND_LEVEL_SUFFIXES = new Set(['co.uk', 'org.uk', 'ac.uk', 'gov.uk', 'com.au', 'net.au', 'org.au', 'co.nz', 'com.br', 'com.mx', 'co.jp', 'co.kr', 'com.sg', 'co.in'])
 
 const parseBooleanQuery = (value: string | string[] | undefined, defaultValue: boolean): boolean => {
   if (Array.isArray(value)) value = value[0]
@@ -96,12 +81,7 @@ const canonicalizeUnsubscribeUrl = (url: string): string => {
     const path = parsed.pathname.toLowerCase().replace(/\/+$/, '') || '/'
     const firstSegment = path.split('/').filter(Boolean)[0] ?? ''
 
-    const family =
-      path.includes('unsubscribe') || path.includes('optout')
-        ? 'unsubscribe'
-        : path.includes('settings') || path.includes('preferences')
-          ? 'preferences'
-          : firstSegment || 'root'
+    const family = path.includes('unsubscribe') || path.includes('optout') ? 'unsubscribe' : path.includes('settings') || path.includes('preferences') ? 'preferences' : firstSegment || 'root'
 
     return `${protocol}//${hostname}#${family}`
   } catch {
@@ -140,12 +120,7 @@ const sortUnsubscribeUrls = (unsubscribeStats: Map<string, { count: number; last
     const previousLatestSeen = existing.latestSeen
     existing.latestSeen = Math.max(existing.latestSeen, lastSeen)
 
-    if (
-      lastSeen > previousLatestSeen ||
-      (lastSeen === previousLatestSeen &&
-        (count > existing.strongestVariantCount ||
-          (count === existing.strongestVariantCount && rawUrl.length < existing.representative.length)))
-    ) {
+    if (lastSeen > previousLatestSeen || (lastSeen === previousLatestSeen && (count > existing.strongestVariantCount || (count === existing.strongestVariantCount && rawUrl.length < existing.representative.length)))) {
       existing.representative = rawUrl
       existing.strongestVariantCount = count
     }

@@ -203,9 +203,7 @@
             <span class="text-sm font-semibold text-gray-600 dark:text-zinc-300 tabular-nums text-right">{{ formatNumber(sender.count) }}</span>
             <div class="text-right">
               <div v-if="getVisibleUnsubscribeUrls(sender).length > 0" class="flex flex-col items-end gap-1">
-                <a v-for="(url, idx) in getVisibleUnsubscribeUrls(sender)" :key="`${sender.email}-${idx}`" :href="url" :title="url" target="_blank" rel="noopener noreferrer" class="text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 font-medium transition-colors break-all">
-                  {{ formatUnsubscribeLabel(url, idx) }} →
-                </a>
+                <a v-for="(url, idx) in getVisibleUnsubscribeUrls(sender)" :key="`${sender.email}-${idx}`" :href="url" :title="url" target="_blank" rel="noopener noreferrer" class="text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 font-medium transition-colors break-all"> {{ formatUnsubscribeLabel(url, idx) }} → </a>
               </div>
               <span v-else class="text-xs text-gray-300 dark:text-zinc-600">—</span>
             </div>
@@ -357,8 +355,7 @@ watch(
     if (status.value !== 'scanning') return
     if (!progressContainer.value) return
 
-    const distanceFromBottom =
-      progressContainer.value.scrollHeight - progressContainer.value.scrollTop - progressContainer.value.clientHeight
+    const distanceFromBottom = progressContainer.value.scrollHeight - progressContainer.value.scrollTop - progressContainer.value.clientHeight
     const shouldAutoScroll = distanceFromBottom <= AUTO_SCROLL_THRESHOLD_PX
 
     await nextTick()
@@ -434,29 +431,14 @@ const downloadCsv = () => {
             return [[escapeCsv(sender.name), escapeCsv(sender.email), sender.count, escapeCsv(sender.latestSeen), '']]
           }
 
-          return visibleUrls.map((url) => [
-            escapeCsv(sender.name),
-            escapeCsv(sender.email),
-            sender.count,
-            escapeCsv(sender.latestSeen),
-            escapeCsv(url)
-          ])
+          return visibleUrls.map((url) => [escapeCsv(sender.name), escapeCsv(sender.email), sender.count, escapeCsv(sender.latestSeen), escapeCsv(url)])
         })
       : results.value.map((sender) => {
           const unsubscribeUrls = getVisibleUnsubscribeUrls(sender).join(' | ')
-          return [
-            escapeCsv(sender.name),
-            escapeCsv(sender.email),
-            sender.count,
-            escapeCsv(sender.latestSeen),
-            escapeCsv(unsubscribeUrls)
-          ]
+          return [escapeCsv(sender.name), escapeCsv(sender.email), sender.count, escapeCsv(sender.latestSeen), escapeCsv(unsubscribeUrls)]
         })
 
-  const header =
-    scanOptions.value.exportFormat === 'link'
-      ? ['Sender Name', 'Email', 'Email Count', newestSeenLabel, 'Unsubscribe URL']
-      : ['Sender Name', 'Email', 'Email Count', newestSeenLabel, 'Unsubscribe URLs']
+  const header = scanOptions.value.exportFormat === 'link' ? ['Sender Name', 'Email', 'Email Count', newestSeenLabel, 'Unsubscribe URL'] : ['Sender Name', 'Email', 'Email Count', newestSeenLabel, 'Unsubscribe URLs']
   const csv = [header.join(','), ...rows.map((row) => row.join(','))].join('\n')
   const blob = new Blob([csv], { type: 'text/csv' })
   const url = URL.createObjectURL(blob)
