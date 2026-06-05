@@ -15,7 +15,7 @@
 
       <section class="mb-8">
         <h2 class="text-lg font-semibold mb-3">Data we access</h2>
-        <p class="text-gray-600 dark:text-zinc-400 text-sm leading-relaxed mb-3">TrimBox requests read-only access to your Gmail account (<code class="text-xs bg-gray-100 dark:bg-zinc-800 px-1.5 py-0.5 rounded">gmail.readonly</code> scope). We only read:</p>
+        <p class="text-gray-600 dark:text-zinc-400 text-sm leading-relaxed mb-3">TrimBox requests read-only access to your Gmail account (<code class="text-xs bg-gray-100 dark:bg-zinc-800 px-1.5 py-0.5 rounded">gmail.metadata</code> scope). We only read:</p>
         <ul class="list-disc list-inside text-gray-600 dark:text-zinc-400 text-sm space-y-1.5 ml-1">
           <li>Email headers (From, Subject, List-Unsubscribe)</li>
           <li>Your Gmail address (to display your signed-in account)</li>
@@ -26,6 +26,11 @@
       <section class="mb-8">
         <h2 class="text-lg font-semibold mb-3">Data we store</h2>
         <p class="text-gray-600 dark:text-zinc-400 text-sm leading-relaxed">We do not store any of your email data on our servers. All scanning happens in memory during your session and is discarded when you close the tab or sign out. We store a short-lived access token in an HTTP-only cookie solely to authenticate your scan request — it expires after one hour.</p>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-lg font-semibold mb-3">Google API Limited Use</h2>
+        <p class="text-gray-600 dark:text-zinc-400 text-sm leading-relaxed">TrimBox's use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener" class="text-orange-600 dark:text-orange-400 hover:underline">Google API Services User Data Policy</a>, including the Limited Use requirements. In plain terms: we only use your Gmail data to perform the inbox scan you request, we do not transfer it to third parties, we do not use it for advertising, and we do not allow humans to read your email.</p>
       </section>
 
       <section class="mb-8">

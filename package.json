@@ -8,11 +8,11 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "TMPDIR=/tmp nuxt dev",
     "fix": "eslint . --fix",
     "generate": "nuxt generate",
     "lint": "eslint .",
-    "postinstall": "nuxt prepare",
+    "postinstall": "nuxt prepare && patch-package",
     "preview": "nuxt preview",
     "preversion": "npm run lint && npm test && npm run build",
     "release": "git push --follow-tags",
@@ -26,8 +26,8 @@
   "dependencies": {
     "@nuxtjs/color-mode": "^4.0.0",
     "@nuxtjs/tailwindcss": "^6.12.2",
-    "googleapis": "^144.0.0",
-    "nuxt": "^4.4.6",
+    "googleapis": "^173.0.0",
+    "nuxt": "^4.4.7",
     "vue": "^3.5.13",
     "vue-router": "^5.1.0"
   },
@@ -42,6 +42,7 @@
     "eslint-plugin-simple-import-sort": "^13.0.0",
     "eslint-plugin-vue": "^10.9.1",
     "happy-dom": "^20.9.0",
+    "patch-package": "^8.0.1",
     "prettier": "^3.8.3",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.60.0",

@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
 
   const url = auth.generateAuthUrl({
     access_type: 'online',
-    scope: ['https://www.googleapis.com/auth/gmail.readonly', 'https://www.googleapis.com/auth/userinfo.email'],
+    scope: ['https://www.googleapis.com/auth/gmail.metadata', 'https://www.googleapis.com/auth/userinfo.email'],
     prompt: 'consent'
   })
 

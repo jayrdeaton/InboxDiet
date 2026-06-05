@@ -21,6 +21,58 @@
         </a>
         <p class="mt-4 text-sm text-gray-400 dark:text-zinc-500">Read-only access. Your email content never leaves Google's servers.</p>
       </div>
+
+      <!-- How it works -->
+      <div class="mt-8 space-y-6">
+        <h2 class="text-lg font-semibold text-center text-gray-700 dark:text-zinc-200">How TrimBox works</h2>
+        <div class="grid gap-4 sm:grid-cols-3">
+          <div class="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm dark:shadow-none">
+            <div class="w-8 h-8 rounded-lg bg-orange-100 dark:bg-orange-950 flex items-center justify-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-500" aria-hidden="true">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+            </div>
+            <h3 class="text-sm font-semibold text-gray-800 dark:text-zinc-100 mb-1">Scans your inbox</h3>
+            <p class="text-sm text-gray-500 dark:text-zinc-400">TrimBox reads the sender and header fields of up to 10,000 of your messages to identify mailing lists and bulk senders. Email body content is never read or stored.</p>
+          </div>
+          <div class="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm dark:shadow-none">
+            <div class="w-8 h-8 rounded-lg bg-orange-100 dark:bg-orange-950 flex items-center justify-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-500" aria-hidden="true">
+                <line x1="8" y1="6" x2="21" y2="6" />
+                <line x1="8" y1="12" x2="21" y2="12" />
+                <line x1="8" y1="18" x2="21" y2="18" />
+                <line x1="3" y1="6" x2="3.01" y2="6" />
+                <line x1="3" y1="12" x2="3.01" y2="12" />
+                <line x1="3" y1="18" x2="3.01" y2="18" />
+              </svg>
+            </div>
+            <h3 class="text-sm font-semibold text-gray-800 dark:text-zinc-100 mb-1">Surfaces every sender</h3>
+            <p class="text-sm text-gray-500 dark:text-zinc-400">Results are grouped by sender domain or exact address and sorted by volume, so you can quickly see who's filling your inbox most.</p>
+          </div>
+          <div class="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm dark:shadow-none">
+            <div class="w-8 h-8 rounded-lg bg-orange-100 dark:bg-orange-950 flex items-center justify-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-500" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </div>
+            <h3 class="text-sm font-semibold text-gray-800 dark:text-zinc-100 mb-1">One-click unsubscribe links</h3>
+            <p class="text-sm text-gray-500 dark:text-zinc-400">Unsubscribe links are extracted directly from email headers and displayed alongside each sender, so you can opt out without digging through your inbox.</p>
+          </div>
+        </div>
+
+        <!-- Privacy callout -->
+        <div class="bg-gray-50 dark:bg-zinc-900/50 border border-gray-200 dark:border-zinc-800 rounded-xl px-5 py-4 text-sm text-gray-500 dark:text-zinc-400 space-y-1">
+          <p><span class="font-medium text-gray-700 dark:text-zinc-200">Gmail permission used:</span> Read-only access (<code class="text-xs bg-gray-100 dark:bg-zinc-800 px-1 py-0.5 rounded">https://www.googleapis.com/auth/gmail.metadata</code>) to fetch message metadata and headers.</p>
+          <p><span class="font-medium text-gray-700 dark:text-zinc-200">What TrimBox stores:</span> Nothing. No email content, attachments, or personal data are stored on TrimBox servers. All processing happens in memory during the scan and is discarded when you close the tab.</p>
+          <p>
+            See our
+            <NuxtLink to="/privacy" class="text-orange-500 hover:text-orange-400 underline underline-offset-2 transition-colors">Privacy Policy</NuxtLink>
+            for full details.
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- Signed in: ready to scan -->
@@ -108,7 +160,7 @@
           </div>
         </div>
         <button class="w-full bg-orange-500 hover:bg-orange-400 text-white font-semibold rounded-lg py-3 text-sm transition-colors" @click="startScan">Scan Inbox</button>
-        <p class="mt-3 text-center text-xs text-gray-400 dark:text-zinc-500">Scans up to 10,000 messages across the selected mailbox areas. Promotions-only filtering requires reconnecting once to grant the newer Gmail read-only scope.</p>
+        <p class="mt-3 text-center text-xs text-gray-400 dark:text-zinc-500">Scans up to 10,000 messages across the selected mailbox areas.</p>
       </div>
     </div>
 
