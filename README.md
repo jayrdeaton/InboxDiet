@@ -2,7 +2,7 @@
 
 Scan your Gmail inbox and find every mailing list you're subscribed to.
 
-TrimBox connects to Gmail with read-only metadata access, scans up to 10,000 messages for `List-Unsubscribe` headers, and surfaces every bulk sender — grouped, sorted, and with one-click unsubscribe links. No email content is ever read or stored.
+TrimBox connects to Gmail with read-only metadata access, scans up to 10,000 messages for `List-Unsubscribe` headers, and surfaces every bulk sender, grouped, sorted, and with one-click unsubscribe links. No email content is ever read or stored.
 
 ## Features
 
