@@ -9,7 +9,7 @@
     </div>
     <div class="min-h-screen bg-gray-50 dark:bg-zinc-950 text-gray-900 dark:text-zinc-100 flex flex-col transition-colors duration-200">
       <!-- Header -->
-      <header class="border-b border-gray-200 dark:border-zinc-800 px-6 py-4 flex-shrink-0">
+      <header class="border-b border-gray-200 dark:border-zinc-800 px-6 pb-4 flex-shrink-0" style="padding-top: calc(1rem + env(safe-area-inset-top))">
         <div class="max-w-3xl mx-auto flex items-center justify-between">
           <NuxtLink to="/" class="flex items-center gap-2">
             <img src="/icon.svg" alt="TrimBox" class="w-6 h-6" />
