@@ -2,7 +2,7 @@
   "name": "trimbox",
   "displayName": "TrimBox",
   "private": true,
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Scan your Gmail inbox and find every mailing list you're subscribed to.",
   "author": "Jay Deaton",
   "license": "MIT",
