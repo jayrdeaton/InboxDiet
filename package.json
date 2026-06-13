@@ -1,5 +1,6 @@
 {
   "name": "trimbox",
+  "displayName": "TrimBox",
   "private": true,
   "version": "1.0.7",
   "description": "Scan your Gmail inbox and find every mailing list you're subscribed to.",
